@@ -6,7 +6,7 @@
 #    By: mike <mike@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/05 16:35:56 by mike              #+#    #+#              #
-#    Updated: 2020/05/05 16:53:54 by mike             ###   ########.fr        #
+#    Updated: 2020/05/08 20:16:59 by mike             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,13 +29,13 @@ W = \033[0m
 all: $(NAME)
 
 $(NAME):
-	@cd Libft && make
+	@cd Libft && make -s
 	@gcc -c $(SRC) $(FLAGS)
 	@gcc $(OBJ) $(MLX) -o $(NAME)
 	@echo "$(G)The game is ready to play!$(W)"
 
 clean:
-	@cd Libft && make clean
+	@cd Libft && make -s clean
 	@rm -rf $(OBJ)
 	@echo "$(G)Object files deleted.$(W)"
 
